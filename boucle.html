@@ -1,0 +1,81 @@
+<script type="text/javascript">
+
+    const greeting = 50;
+    for (let i = 0; i < greeting; i++) {
+    console.log("Hello HOGI !");
+    }
+
+    const cni = {
+        nom : "Havyarimana",
+        prenom : "Prosper",
+        nomduPere : "Niyonkuru",
+        nomdelaMere : "Nzocumugani",
+        dateNaissance : 1988,
+        lieuNaissance : "Gihosha",
+        province : "Bujumbura Mairie",
+        etatCivil : "Célibataire",
+        numCni : "0P200431",
+        nomComplet : function(){
+            return this.nom + " " + this.prenom;
+        }
+    };
+    cni.nomComplet();
+
+</script>
+
+/*
+    EXPLIQUEZ LE POURQUOI DE WHILE ET DO WHILE
+
+    La boucle do while exécute le contenu de la boucle une fois avant de vérifier la condition du moment. 
+    Alors que la boucle while vérifie la condition avant d’exécuter le contenu.
+
+    La différence réside dans le moment où la condition est évaluée. Dans une boucle do..while, la condition 
+    n'est pas évaluée jusqu'à la fin de chaque boucle. Cela signifie qu'une boucle do..while sera toujours 
+    exécutée au moins une fois. Dans une boucle while, la condition est évaluée au début.
+
+    Ici, je suppose que wdlen est évalué à false (c'est-à-dire qu'il est supérieur à 1) au début de la boucle
+    while, de sorte que la boucle while ne s'exécute jamais. Dans la boucle do..while, elle n'est cochée que
+    jusqu'à la fin de la première boucle. Vous obtenez donc le résultat attendu.
+*/ 
+
+/* BOUCLE FOR ... IN */
+
+<script>
+    const cni = {
+        nom : "Havyarimana",
+        prenom : "Prosper",
+        nomduPere : "Niyonkuru",
+        nomdelaMere : "Nzocumugani",
+        dateNaissance : 1988,
+        lieuNaissance : "Gihosha",
+        province : "Bujumbura Mairie",
+        etatCivil : "Célibataire",
+        numCni : "0P200431",
+    };
+
+    let txt = "";
+    for (let x in cni) {
+    txt += cni[x] + " ";
+    }
+</script>
+
+/* BOUCLE FOR ... OF */
+<script>
+const cars = ["BMW", "Volvo", "Mini"];
+
+let text = "";
+for (let x of cars) {
+  text += x + "<br>";
+}
+</script>
+    
+*/ DIFFERENCE ENTRE FOR ...IN et FOR ...OF 
+Using ‘for…in’
+We begin with for...in, which is used to loop over an enumerable. 
+This is perfect for counting over key-value pairs in an object, such as the example below.
+
+Using ‘for…of’
+OK, now we transition to the for...of loop. This loop has a very similar syntax. However, 
+an iterable is required after the of keyword — in contrast to the requirement of an enumerable with in.
+
+*/
